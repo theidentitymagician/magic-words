@@ -1,0 +1,53 @@
+<style>
+/* ===== Systeme checkout header code (Settings -> Edit header code). Element IDs are from the Magic Words
+   checkout (page 46809969); on a new checkout, read the new IDs from the live page first and swap them. ===== */
+/* Payment column order: names, email, card. Hide the default sub-headings. */
+#row-0342758d > div { display:flex !important; flex-direction:column !important; }
+#row-0342758d > div > div:has(#headline-be2fe439), #row-0342758d > div > div:has(#headline-f9661d8a) { display:none !important; }
+#row-0342758d > div > div:has(#row-a616ceb4) { order:1; }
+#row-0342758d > div > div:has(#row-b5e608f5) { order:2; }
+#row-0342758d > div > div:has(#payment-method-ca59ea12) { order:3; }
+#row-b5e608f5 > div:first-child { grid-column:1 / -1 !important; }
+#row-b5e608f5 > div:not(:first-child) { display:none !important; }
+/* Desktop: product left, payment right, one screen */
+@media (min-width:1000px){
+  #section-af3e482b { padding-top:20px !important; padding-bottom:24px !important; }
+  #section-af3e482b > div { max-width:1120px !important; }
+  #row-a692d958 { padding:30px 44px 102px !important; }
+  #row-a692d958 > div { display:grid !important; grid-template-columns:1fr 1fr; column-gap:52px; align-items:start; }
+  #row-a692d958 > div > div:has(#rawhtml-1aacf34d) { grid-column:1; grid-row:1 / span 5; align-self:center; }
+  #row-a692d958 > div > div:not(:has(#rawhtml-1aacf34d)) { grid-column:2; }
+  #row-a692d958 > div > div:has(#headline-ff98ceb6) { display:none !important; }
+  #row-a692d958 > div > div:has(#row-0342758d) { margin:0 !important; padding:0 !important; width:100% !important; }
+  #row-0342758d { padding:0 !important; margin:0 !important; background:transparent !important; box-shadow:none !important; width:100% !important; max-width:100% !important; }
+  #row-0342758d > div { padding:0 !important; margin-bottom:0 !important; }
+  #payment-method-ca59ea12 > div:first-child { padding:10px 18px !important; }
+  #payment-method-ca59ea12 > div:nth-child(2) { padding:14px 18px 4px !important; }
+  #payment-method-ca59ea12 > div:nth-child(2) > div { margin-bottom:12px !important; }
+  #payment-method-ca59ea12 label { margin-bottom:6px !important; }
+  #payment-method-ca59ea12 > div:nth-child(2) > div > div > div { padding-top:13px !important; padding-bottom:13px !important; }
+  #form-input-68b348bc, #form-input-195bcc17, #form-input-3a4a7d5c { height:46px !important; }
+  #row-a616ceb4, #row-b5e608f5 { margin-bottom:14px !important; }
+}
+/* Phones: one flowing card, product then payment */
+@media (max-width:999px){
+  #row-a692d958 { padding:26px 18px 22px !important; }
+  #row-a692d958 > div > div:has(#headline-ff98ceb6) { display:none !important; }
+  #row-a692d958 > div > div:has(#offerprice-0a4dc178) { margin-top:22px !important; }
+  #row-a692d958 > div > div:has(#row-0342758d) { margin:0 !important; padding:0 !important; width:100% !important; }
+  #row-0342758d { padding:14px 0 0 !important; margin:0 !important; background:transparent !important; box-shadow:none !important; border-radius:0 !important; width:100% !important; max-width:100% !important; }
+  #row-0342758d > div { padding:0 !important; margin-bottom:0 !important; }
+  #rawhtml-1aacf34d .mw-card .mw-top .mw-img { width:100% !important; max-width:320px !important; aspect-ratio:1 / 1; object-fit:cover; object-position:center; }
+  #rawhtml-1aacf34d .mw-card .mw-top .mw-title { font-size:35px !important; }
+  #rawhtml-1aacf34d .mw-card .mw-top .mw-sub { font-size:19px !important; }
+  #payment-button-7e78910c { box-shadow:0 14px 34px rgba(0,0,0,0.38), 0 4px 10px rgba(0,0,0,0.22) !important; }
+  #row-0342758d > div > div:has(#payment-method-ca59ea12) { margin-bottom:18px !important; }
+  #payment-method-ca59ea12 > div:nth-child(2) { padding-bottom:4px !important; }
+  #payment-method-ca59ea12 > div:nth-child(2) > div:last-child { margin-bottom:12px !important; }
+}
+/* Always */
+#payment-method-ca59ea12 > div:nth-child(2) > div > div > div { background:#ffffff !important; border:1px solid #d9d4cc !important; border-radius:6px !important; }
+#rawhtml-1aacf34d .mw-sublist { font-weight:500 !important; color:#000 !important; }
+#checkbox-6c8235cb, #checkbox-6c8235cb * { color:#000 !important; font-weight:600 !important; }
+#checkbox-6c8235cb input[type=checkbox] { width:18px; height:18px; accent-color:#2F2A26; }
+</style>
